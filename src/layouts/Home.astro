@@ -13,15 +13,27 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
-    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content="{Astro.generator}" />
     <title>Nyxia</title>
   </head>
   <body class="bg-black">
     <Navbar />
     <slot />
-    <video class="object-cover top-0 absolute -z-10 h-[800px] min-w-full pointer-events-none bg-red" autoplay muted playsinline loop src={backgroundVideo} poster={backgroundVideoThumbnail.src}
-    ></video>
-    <div class="absolute inset-0 bottom-50 h-[800px] bg-gradient-to-t from-black -z-10 via-black/10 to-transparent"></div>
+    <video
+      playsinline
+      muted
+      autoplay
+      loop
+      src={backgroundVideo}
+      poster={backgroundVideoThumbnail.src}
+      class="bg-red pointer-events-none absolute top-0 -z-10 h-[800px] min-w-full object-cover">
+    </video>
+    <div
+      class="absolute inset-0 bottom-50 -z-10 h-[800px] bg-gradient-to-t from-black via-black/10 to-transparent">
+    </div>
   </body>
 </html>

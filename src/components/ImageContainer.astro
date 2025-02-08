@@ -11,8 +11,19 @@ interface Props {
 const { imgSrc, height, width, className } = Astro.props;
 ---
 
-<div class="bg-black border inline-flex justify-center border-white/10 p-2.5 rounded-4xl relative">
-  <img src={imgSrc} height={height} width={width} alt="A man using laptop." class={twMerge("rounded-3xl object-fit border border-white/10", className)} />
-  <div class="h-[1px] w-64 bg-gradient-to-l from-transparent via-primary-500 to-transparent absolute -bottom-[1px] z-[1]"></div>
-  <div class="bg-primary-500 -z-10 blur-2xl absolute bottom-0 h-14 w-64 rounded"></div>
+<div
+  class="relative inline-flex justify-center rounded-4xl border border-white/10 bg-black p-2.5">
+  <img
+    src={imgSrc}
+    height={height}
+    width={width}
+    alt="A man using laptop."
+    class={twMerge("rounded-3xl object-fit border border-white/10", className)}
+  />
+  <div
+    class="via-primary-500 absolute -bottom-[1px] z-[1] h-[1px] w-64 bg-gradient-to-l from-transparent to-transparent">
+  </div>
+  <div
+    class="bg-primary-500 absolute bottom-0 -z-10 h-14 w-64 rounded blur-2xl">
+  </div>
 </div>
