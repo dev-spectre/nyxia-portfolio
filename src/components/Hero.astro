@@ -1,5 +1,6 @@
 ---
 import backgroundVideo from "../assets/bg.webm";
+import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
 ---
 
 <div class="text-white relative">
@@ -16,5 +17,5 @@ import backgroundVideo from "../assets/bg.webm";
       </section>
     </div>
   </div>
-  <video class="object-cover h-[800px] min-w-full pointer-events-none" autoplay loop src={backgroundVideo}></video>
+  <video class="object-cover h-[800px] min-w-full pointer-events-none bg-red" autoplay muted playsinline loop src={backgroundVideo} poster={backgroundVideoThumbnail.src}></video>
 </div>
