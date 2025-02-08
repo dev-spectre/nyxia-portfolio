@@ -1,21 +1,13 @@
----
-import backgroundVideo from "../assets/bg.webm";
-import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
----
-
-<div class="text-white relative">
-  <div class="absolute inset-0 bg-gradient-to-t from-black from-0% via-black/10 to-transparent">
-    <div class="container mx-auto px-5 grid content-center h-full">
-      <section class="max-w-lg sm:max-w-3xl">
-        <h1 class="capitalize text-6xl sm:text-7xl md:text-8xl">Premium agency <span class="lowercase">for</span> creatives.</h1>
-        <p class="my-7 max-w-xs text-pretty sm:max-w-sm text-white/60">We specialize in crafting unique digital presence that help businesses grow and stand out in their industries.</p>
-        <div class="flex gap-4 flex-wrap">
-          <a href="/contact" class="px-4 py-3 bg-white text-black rounded-lg capitalize">Connect with us</a>
-          <a href="/about" class="px-4 py-3 bg-white/15 rounded-lg">What is Nyxia?</a>
-        </div>
-        <div class="mt-10 mb-5 w-72 h-0.5 bg-linear-to-r from-transparent via-white/20 to-transparent"></div>
-      </section>
-    </div>
+<div class="text-white">
+  <div class="container mx-auto px-5 grid content-center mt-48">
+    <section class="max-w-lg sm:max-w-3xl">
+      <h1 class="capitalize text-6xl sm:text-7xl md:text-8xl">Premium agency <span class="lowercase">for</span> creatives.</h1>
+      <p class="my-7 max-w-xs text-pretty sm:max-w-sm text-white/60">We specialize in crafting unique digital presence that help businesses grow and stand out in their industries.</p>
+      <div class="flex gap-4 flex-wrap">
+        <a href="/contact" class="px-4 py-3 bg-white text-black rounded-lg capitalize">Connect with us</a>
+        <a href="/about" class="px-4 py-3 bg-white/15 rounded-lg">What is Nyxia?</a>
+      </div>
+      <div class="mt-10 mb-5 w-72 h-0.5 bg-linear-to-r from-transparent via-white/20 to-transparent"></div>
+    </section>
   </div>
-  <video class="object-cover h-[800px] min-w-full pointer-events-none bg-red" autoplay muted playsinline loop src={backgroundVideo} poster={backgroundVideoThumbnail.src}></video>
 </div>
