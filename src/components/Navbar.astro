@@ -12,7 +12,7 @@ const navLinks = [
 ];
 ---
 
-<header class="border-b z-10 md:bg-black/20 backdrop-blur-3xl border-white/10 px-5 py-7">
+<header class="border-b absolute inset-0 bottom-auto z-10 bg-gradient-to-t from-black/30 via-black/20 to-transparent backdrop-blur-xl border-white/10 px-5 py-7">
   <div class="max-md:flex-col flex container mx-auto">
     <div class="mr-5 flex gap-5 items-center">
       <a href="/">
@@ -38,17 +38,24 @@ const navLinks = [
           }
         </ul>
       </nav>
-      <a href="/contact" class="max-md:mt-7 p-1 max-md:w-full max-md:mx-3 bg-primary-400 rounded-lg font-semibold">
-        <div class="bg-primary-500 rounded-md py-1 px-4">Contact Now</div>
+      <a href="/contact" class="max-md:mt-7 p-1 max-md:w-full max-md:mx-3 bg-primary-400 rounded-lg font-semibld">
+        <div class="bg-primary-500 rounded-md py-1 px-4 text-white">Contact Now</div>
       </a>
     </div>
   </div>
 </header>
 
 <script>
+  const navToggleClass = "max-md:hidden";
   const navButton = document.querySelector("button#nav-btn");
+  const navContainer = document.querySelector("#nav-container");
   navButton?.addEventListener("click", () => {
-    const navContainer = document.querySelector("#nav-container");
-    navContainer?.classList.toggle("max-md:hidden");
+    navContainer?.classList.toggle(navToggleClass);
+  });
+
+  const navBar = document.querySelector("header");
+  window.addEventListener("click", (event) => {
+    if (event.target && navBar?.contains(event.target as Node)) return;
+    navContainer?.classList.add(navToggleClass);
   });
 </script>
