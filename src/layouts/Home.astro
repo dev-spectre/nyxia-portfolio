@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import backgroundVideo from "../assets/bg.webm";
+import backgroundVideoReduced from "../assets/bg-reduced.webm";
 import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
 import "../styles/global.css";
 ---
@@ -23,15 +24,19 @@ import "../styles/global.css";
   <body class="bg-black">
     <Navbar />
     <slot />
-    <video
-      playsinline
-      muted
-      autoplay
-      loop
-      src={backgroundVideo}
-      poster={backgroundVideoThumbnail.src}
-      class="bg-red pointer-events-none absolute top-0 -z-10 h-[800px] min-w-full object-cover">
-    </video>
+    <div class="absolute top-0 -z-10 h-[800px] w-full overflow-hidden">
+      <video
+        id="bg-video"
+        playsinline
+        muted
+        autoplay
+        loop
+        poster={backgroundVideoThumbnail.src}
+        class="bg-red pointer-events-none h-full min-w-full object-cover blur-lg">
+        <source src={backgroundVideoReduced} type="video/webm" />
+        <source src={backgroundVideo} type="video/webm" />
+      </video>
+    </div>
     <div
       class="absolute inset-0 bottom-50 -z-10 h-[800px] bg-gradient-to-t from-black via-black/10 to-transparent">
     </div>
