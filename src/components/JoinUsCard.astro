@@ -1,0 +1,44 @@
+---
+import backgroundVideo from "../assets/bg.webm";
+import backgroundVideoReduced from "../assets/bg-reduced.webm";
+import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
+import TitleCard from "./TitleCard.astro";
+---
+
+<div
+  class="relative isolate flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 px-2 py-4 text-center text-sm text-white sm:px-16 sm:py-10 sm:text-base md:aspect-video md:py-16 lg:px-32">
+  <section>
+    <TitleCard title="Join us now" />
+    <h3 class="text-xl capitalize sm:text-3xl md:text-5xl">
+      Each project we undertake
+      <div class="mb-3 text-white/60 sm:mb-6 md:mt-2">
+        is a unique opportunity.
+      </div>
+    </h3>
+    <p class="mx-auto mb-4 w-[80%] max-w-md text-white/60 sm:mb-6">
+      Ready to take the next step? Join us now and start transforming your
+      vision into reality with expert support.
+    </p>
+    <a
+      href="/about"
+      class="bg-primary-400 relative isolate inline-flex items-center justify-center rounded-lg p-1">
+      <span
+        class="bg-primary-500 inline-block rounded-md px-3 py-1 text-white capitalize sm:py-2">
+        View about Nyxia
+      </span>
+      <span
+        class="bg-primary-500 absolute -z-10 h-1/2 w-[150%] rounded-full blur-2xl">
+      </span>
+    </a>
+  </section>
+  <video
+    playsinline
+    muted
+    autoplay
+    loop
+    poster={backgroundVideoThumbnail.src}
+    class="bg-red pointer-events-none absolute top-0 -z-10 h-full min-w-full object-cover blur-md">
+    <source src={backgroundVideoReduced} type="video/webm" />
+    <source src={backgroundVideo} type="video/webm" />
+  </video>
+</div>
