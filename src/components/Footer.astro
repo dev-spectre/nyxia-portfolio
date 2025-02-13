@@ -1,0 +1,63 @@
+---
+import TitleCard from "./TitleCard.astro";
+import backgroundFooter from "../assets/bg-footer.avif";
+
+const pathname = Astro.url.pathname;
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Contact", path: "/contact" },
+  { name: "FAQ", path: `${pathname}#faq` },
+];
+---
+
+<footer class="relative isolate overflow-hidden border-t border-t-white/10">
+  <div
+    class="container mx-auto flex flex-wrap justify-around gap-10 px-5 py-10 text-white/60 sm:flex-row">
+    <section>
+      <h3 class="mb-3 text-lg text-white">Quick Links</h3>
+      <nav>
+        <ul class="flex flex-col gap-3">
+          {
+            navLinks.map((link) => (
+              <li>
+                <a href={link.path}>{link.name}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <h3 class="mb-3 text-lg text-white">Social</h3>
+      <ul class="flex flex-col gap-2">
+        <li><a href="#">X (Twitter)</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Youtube</a></li>
+      </ul>
+    </section>
+    <section class="text-white">
+      <TitleCard title="Sales - 0" />
+    </section>
+  </div>
+  <div
+    class="h-[1px] w-[75%] bg-linear-to-r from-transparent via-white/10 to-transparent">
+  </div>
+  <section>
+    <div
+      class="container flex items-center justify-end gap-4 px-5 py-2 text-white/60">
+      <a href="/terms" class="capitalize">Terms & conditions</a>
+      <span
+        class="inline-block h-7 w-[1px] bg-gradient-to-b from-transparent via-white/20 to-transparent">
+      </span>
+      <a href="/policy" class="capitalize">Privacy policy</a>
+    </div>
+  </section>
+  <img
+    src={backgroundFooter.src}
+    alt=""
+    aria-hidden
+    class="absolute inset-0 -z-10 aspect-auto min-h-full object-cover blur-lg"
+  />
+</footer>
