@@ -1,9 +1,11 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import backgroundVideo from "../assets/bg.webm";
 import backgroundVideoReduced from "../assets/bg-reduced.webm";
 import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
 import "../styles/global.css";
+import JoinUsCard from "../components/JoinUsCard.astro";
 ---
 
 <!doctype html>
@@ -25,6 +27,10 @@ import "../styles/global.css";
   <body class="bg-black">
     <Navbar />
     <slot />
+    <div class="flex items-center justify-center px-5 py-16">
+      <JoinUsCard />
+    </div>
+    <Footer />
     <div class="absolute top-0 -z-10 h-[800px] w-full overflow-hidden">
       <video
         id="bg-video"
@@ -41,5 +47,6 @@ import "../styles/global.css";
     <div
       class="absolute inset-0 bottom-50 -z-10 h-[800px] bg-gradient-to-t from-black via-black/10 to-transparent">
     </div>
+    <div class="fixed inset-0 top-auto h-5 backdrop-blur-[2px]"></div>
   </body>
 </html>
