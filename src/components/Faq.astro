@@ -1,0 +1,58 @@
+---
+import Accordion from "./Accordion.astro";
+import TitleCard from "./TitleCard.astro";
+
+const faq = [
+  {
+    title: "What do I need to get started?",
+    content:
+      "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+  },
+  {
+    title: "What kind of customization is available?",
+    content:
+      "We offer full customization options, including layout changes, color schemes, typography, and content sections to align with your brand.",
+  },
+  {
+    title: "How easy is it to edit for beginners?",
+    content:
+      "Our platform is designed with beginners in mind, offering an intuitive drag-and-drop interface that makes editing simple and straightforward. No coding skills required—just customize and go!",
+  },
+  {
+    title: "Let me know more about moneyback guarantee?",
+    content:
+      "Our money-back guarantee ensures peace of mind by offering a full refund if you're not satisfied with the final product within a specified time frame.",
+  },
+  {
+    title: "Do I need to know how to code?",
+    content:
+      "No, you don't need to know how to code. Our platform offers intuitive tools and templates that allow you to create and manage your website with ease.",
+  },
+  {
+    title: "What will I get after purchasing the template?",
+    content:
+      "After purchasing the template, you'll receive a fully customizable, ready-to-use design with all necessary files and documentation.",
+  },
+];
+---
+
+<section
+  id="faq"
+  class="relative container mx-auto gap-16 px-5 pt-7 text-white lg:flex">
+  <div
+    class="absolute inset-0 bottom-auto h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
+  </div>
+  <div>
+    <TitleCard title="FAQ" />
+    <h2 class="text-5xl">
+      Frequently <div class="text-white/60 capitalize">asked questions</div>
+    </h2>
+    <p class="my-4 max-w-md text-white/60">
+      Have questions? Our FAQ section has you covered with quick answers to the
+      most common inquiries.
+    </p>
+  </div>
+  <div class="mt-7 flex flex-col gap-5 lg:w-[70%]">
+    {faq.map((question) => <Accordion {...question} />)}
+  </div>
+</section>
