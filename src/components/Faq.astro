@@ -1,5 +1,6 @@
 ---
 import Accordion from "./Accordion.astro";
+import SecondaryTitle from "./SecondaryTitle.astro";
 import TitleCard from "./TitleCard.astro";
 
 const faq = [
@@ -44,9 +45,7 @@ const faq = [
   </div>
   <div>
     <TitleCard title="FAQ" />
-    <h2 class="text-5xl">
-      Frequently <div class="text-white/60 capitalize">asked questions</div>
-    </h2>
+    <SecondaryTitle main="Frequently" sub="asked questions" />
     <p class="my-4 max-w-md text-white/60">
       Have questions? Our FAQ section has you covered with quick answers to the
       most common inquiries.

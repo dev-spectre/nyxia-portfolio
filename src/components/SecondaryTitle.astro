@@ -1,0 +1,13 @@
+---
+interface Props {
+  main: string;
+  sub: string;
+}
+
+const { main, sub } = Astro.props;
+---
+
+<h3 class="text-xl text-white capitalize sm:text-3xl md:text-5xl">
+  {main}
+  <div class="mt-2 text-white/60">{sub}</div>
+</h3>
