@@ -5,9 +5,12 @@ interface Props {
 }
 
 const { main, sub } = Astro.props;
+
+const mainFormatted = `${main[0]}${main.slice(1).toLowerCase()}`;
+const subFormatted = sub.toLowerCase();
 ---
 
 <h3 class="text-2xl text-white capitalize sm:text-4xl md:text-5xl">
-  {main}
-  <div class="md:mt-2 text-white/60">{sub}</div>
+  {mainFormatted}
+  <div class="text-white/60 md:mt-2">{subFormatted}</div>
 </h3>
