@@ -3,12 +3,13 @@ import { twMerge } from "tailwind-merge";
 
 interface Props {
   imgSrc: string;
+  alt?: string;
   height?: string;
   width?: string;
   className?: string;
 }
 
-const { imgSrc, height, width, className } = Astro.props;
+const { imgSrc, height, width, alt, className } = Astro.props;
 ---
 
 <div
@@ -17,8 +18,8 @@ const { imgSrc, height, width, className } = Astro.props;
     src={imgSrc}
     height={height}
     width={width}
-    alt="A man using laptop."
-    class={twMerge("rounded-3xl object-fit border border-white/10", className)}
+    alt={alt ?? ""}
+    class={twMerge("rounded-3xl object-cover border border-white/10", className)}
   />
   <div
     class="via-primary-500 absolute -bottom-[1px] z-[1] h-[1px] w-64 bg-gradient-to-l from-transparent to-transparent">
