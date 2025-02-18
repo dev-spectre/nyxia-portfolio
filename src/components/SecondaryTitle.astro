@@ -6,7 +6,7 @@ interface Props {
 
 const { main, sub } = Astro.props;
 
-const mainFormatted = `${main[0]}${main.slice(1).toLowerCase()}`;
+const mainFormatted = `${main[0].toUpperCase()}${main.slice(1).toLowerCase()}`;
 const subFormatted = sub.toLowerCase();
 ---
 
