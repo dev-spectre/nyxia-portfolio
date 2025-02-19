@@ -6,6 +6,7 @@ import backgroundVideoReduced from "../assets/bg-reduced.webm";
 import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
 import "../styles/global.css";
 import JoinUsCard from "../components/JoinUsCard.astro";
+import Faq from "../components/Faq.astro";
 ---
 
 <!doctype html>
@@ -27,7 +28,8 @@ import JoinUsCard from "../components/JoinUsCard.astro";
   <body class="bg-black">
     <Navbar />
     <slot />
-    <div class="flex items-center justify-center px-5 py-16">
+    <Faq />
+    <div class="flex items-center justify-center px-5 py-24">
       <JoinUsCard />
     </div>
     <Footer />
