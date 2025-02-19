@@ -1,0 +1,59 @@
+---
+import FeatureListItem from "./FeatureListItem.astro";
+import TitleCard from "./TitleCard.astro";
+import backgroundCard from "../assets/bg-card.avif";
+import CardTag from "./CardTag.astro";
+
+interface Props {
+  category: string;
+  title: string;
+  content: string;
+  features?: string[];
+  tags?: string[];
+}
+
+const { category, title, content, features, tags } = Astro.props;
+---
+
+<article
+  class="relative isolate overflow-hidden rounded-3xl border border-white/10 bg-black px-10 py-8">
+  <div class="mb-2 flex items-center justify-between">
+    <div
+      class="relative flex h-12 w-12 items-center justify-center rounded-lg border-1 border-[#091532] bg-black bg-radial from-[#081025] from-50% to-black fill-white px-3 py-3">
+      <slot name="icon" />
+      <div class="bg-primary-500/40 absolute inset-0 -z-10 blur-lg"></div>
+    </div>
+    <div class="-mb-4">
+      <TitleCard title={category} />
+    </div>
+  </div>
+  <h3 class="inline text-lg text-white capitalize">{title}</h3>
+  <div
+    class="my-3 h-[1px] w-[30%] bg-gradient-to-l from-transparent via-white/30 to-transparent">
+  </div>
+  <p class="mt-4 mb-5">
+    {content}
+  </p>
+  {
+    tags && (
+      <div class="flex flex-wrap gap-3">
+        {tags.map((tag) => (
+          <CardTag>{tag}</CardTag>
+        ))}
+      </div>
+    )
+  }
+  <div class="flex flex-wrap gap-3">
+    <slot name="tag" />
+  </div>
+  {
+    features && (
+      <ul class="mt-7 capitalize">
+        {features.map((feature) => (
+          <FeatureListItem content={feature} />
+        ))}
+      </ul>
+    )
+  }
+  <img src={backgroundCard.src} alt="" class="absolute inset-0 -z-10" />
+</article>

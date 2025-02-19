@@ -1,0 +1,42 @@
+---
+import arrowUpRight from "../assets/arrow-up-right.svg";
+interface Props {
+  iconSrc: string;
+  title: string;
+  secondaryTitle: string;
+  content: string;
+}
+
+const { iconSrc, title, secondaryTitle, content } = Astro.props;
+---
+
+<a
+  href="/contact"
+  class="from-primary-900 via-primary-900/90 group relative max-w-96 rounded-xl border border-white/10 bg-gradient-to-t to-[#09090A]">
+  <div
+    class="via-primary-500 absolute -top-[1px] bottom-auto left-[50%] -ml-[85px] h-[1px] w-[170px] bg-gradient-to-l from-transparent to-transparent">
+  </div>
+  <div class="px-10 py-7">
+    <div class="mb-3 flex items-center justify-between">
+      <img src={iconSrc} alt="" class="rounded-full" />
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-7 w-7 stroke-gray-700 group-hover:stroke-white/60">
+        <line x1="7" y1="17" x2="17" y2="7"></line><polyline
+          points="7 7 17 7 17 17">
+        </polyline>
+      </svg>
+    </div>
+    <h3 class="text-lg text-white">{title}</h3>
+    <p class="mb-3">{secondaryTitle}</p>
+    <div
+      class="my-3 h-[1px] w-[50%] bg-gradient-to-l from-transparent via-white/15 to-transparent">
+    </div>
+    <p>{content}</p>
+  </div>
+</a>
