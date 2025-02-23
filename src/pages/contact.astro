@@ -1,5 +1,163 @@
 ---
-import Home from "../layouts/Home.astro";
+import Main from "../layouts/Main.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
+import Container from "../components/Container.astro";
+import InputContainer from "../components/InputContainer.astro";
+import TextInput from "../components/TextInput.astro";
 ---
 
-<Home />
+<Main>
+  <div
+    class="container mx-auto grid grid-cols-1 place-items-center px-5 py-52 text-center text-white">
+    <div
+      class="flex items-center gap-3 rounded-lg border border-white/5 bg-white/10 px-1 py-1 capitalize">
+      <div class="bg-primary-500 rounded-md px-2 py-1 text-sm font-extrabold">
+        24/7
+      </div>
+      <span>Let's Work Together</span>
+    </div>
+    <h2
+      class="mt-5 max-w-4xl text-4xl capitalize sm:text-7xl md:text-7xl lg:text-[5rem]">
+      Any Questions Rising? We are All Here.
+    </h2>
+    <p class="mt-7 mb-7 max-w-md text-pretty text-white/60">
+      Whether you have a question, need assistance, or want to start a new
+      project, our team is here to help.
+    </p>
+    <PrimaryButton content="Fill the form out!" link="#form" />
+  </div>
+
+  <div
+    id="form"
+    class="container mx-auto flex items-start flex-wrap justify-center gap-5 px-5 text-white">
+    <div class="max-w-4xl grow">
+      <Container>
+        <form class="flex flex-col gap-7 sm:w-full">
+          <div class="flex flex-col gap-7 md:flex-row">
+            <InputContainer label="First name" id="first-name">
+              <TextInput id="first-name" />
+            </InputContainer>
+            <InputContainer label="Last name" id="last-name">
+              <TextInput id="last-name" />
+            </InputContainer>
+          </div>
+          <InputContainer label="How can we reach you?" id="email">
+            <input
+              id="email"
+              type="email"
+              placeholder="email@example.com"
+              class="bg-secondary-700 w-full rounded-lg border border-white/10 px-2 py-2 pb-3 placeholder:text-white/30"
+            />
+          </InputContainer>
+          <InputContainer label="Message" id="message">
+            <!-- prettier-ignore -->
+            <textarea
+              id="message"
+              class="bg-secondary-700 h-32 w-full rounded-lg border border-white/10 px-2 py-2"></textarea>
+          </InputContainer>
+        </form>
+      </Container>
+    </div>
+    <div class="flex grow flex-col flex-wrap gap-4 sm:flex-row lg:max-w-72">
+      <div class="min-w-60 grow basis-2">
+        <Container>
+          <h3>Email</h3>
+          <div
+            class="my-3 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
+          </div>
+          <a href="mailto:nyxia.agency@gmail.com" class="text-white/30">
+            nyxia.agency@gmail.com
+          </a>
+        </Container>
+      </div>
+      <div class="min-w-60 grow basis-2">
+        <Container>
+          <h3>Phone</h3>
+          <div
+            class="my-3 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
+          </div>
+          <a
+            href="https://wa.me/919383475378?text=Hey%20Nyxia"
+            target="_blank"
+            class="text-white/30">
+            +91 9383 47 5378
+          </a>
+        </Container>
+      </div>
+    </div>
+
+    <div
+      class="relative isolate -z-10 container mx-auto mt-16 -mb-2 flex justify-center">
+      <div class="bg-primary-500 absolute top-0 -z-10 h-32 w-[70%] blur-3xl">
+      </div>
+      <svg viewBox="0 0 1440 97" fill="none" id="svg-177258987_1568">
+        <path
+          d="M1280.45 0H159.546C133.625 0 108.146 6.71721 85.594 19.4967L-9.15527e-05 68H1440L1354.41 19.4967C1331.85 6.71722 1306.38 0 1280.45 0Z"
+          fill="url(#svg-177258987_1568_paint0_linear_763_7)">
+        </path>
+        <path
+          d="M159.546 0.5H1280.45C1306.29 0.5 1331.68 7.19483 1354.16 19.9317L1438.1 67.5H1.89644L85.8405 19.9317C108.317 7.19482 133.711 0.5 159.546 0.5Z"
+          stroke="url(#svg-177258987_1568_paint1_linear_763_7)"
+          stroke-opacity="0.1">
+        </path>
+        <rect
+          x="-9.15527e-05"
+          y="67"
+          width="1440"
+          height="30"
+          fill="url(#svg-177258987_1568_paint2_linear_763_7)">
+        </rect>
+        <rect
+          x="270"
+          width="900"
+          height="1"
+          fill="url(#svg-177258987_1568_paint3_linear_763_7)">
+        </rect>
+        <defs>
+          <linearGradient
+            id="svg-177258987_1568_paint0_linear_763_7"
+            x1="752.681"
+            y1="-2.71596"
+            x2="754.453"
+            y2="134.209"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0A0A0A"></stop>
+            <stop offset="1"></stop>
+          </linearGradient>
+          <linearGradient
+            id="svg-177258987_1568_paint1_linear_763_7"
+            x1="-0.000105544"
+            y1="46"
+            x2="600.261"
+            y2="755.974"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#999999"></stop>
+            <stop offset="0.506458" stop-color="white"></stop>
+            <stop offset="1" stop-color="#999999"></stop>
+          </linearGradient>
+          <linearGradient
+            id="svg-177258987_1568_paint2_linear_763_7"
+            x1="720"
+            y1="97"
+            x2="720"
+            y2="67"
+            gradientUnits="userSpaceOnUse">
+            <stop></stop>
+            <stop offset="1" stop-color="#060606"></stop>
+          </linearGradient>
+          <linearGradient
+            id="svg-177258987_1568_paint3_linear_763_7"
+            x1="270"
+            y1="0.5"
+            x2="1170"
+            y2="0.5"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0055FF" stop-opacity="0"></stop>
+            <stop offset="0.5" stop-color="#0055FF"></stop>
+            <stop offset="1" stop-color="#0055FF" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</Main>
