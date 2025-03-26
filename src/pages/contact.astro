@@ -7,89 +7,90 @@ import TextInput from "../components/TextInput.astro";
 ---
 
 <Main>
-  <div
-    class="container mx-auto grid grid-cols-1 place-items-center px-5 py-52 text-center text-white">
-    <div
-      class="flex items-center gap-3 rounded-lg border border-white/5 bg-white/10 px-1 py-1 capitalize">
-      <div class="bg-primary-500 rounded-md px-2 py-1 text-sm font-extrabold">
-        24/7
-      </div>
+  <div class="container mx-auto grid grid-cols-1 place-items-center px-5 py-52 text-center text-white">
+    <div class="flex items-center gap-3 rounded-lg border border-white/5 bg-white/10 px-1 py-1 capitalize">
+      <div class="bg-primary-500 rounded-md px-2 py-1 text-sm font-extrabold">24/7</div>
       <span>Let's Work Together</span>
     </div>
-    <h2
-      class="mt-5 max-w-4xl text-4xl capitalize sm:text-7xl md:text-7xl lg:text-[5rem]">
-      Any Questions Rising? We are All Here.
-    </h2>
-    <p class="mt-7 mb-7 max-w-md text-pretty text-white/60">
-      Whether you have a question, need assistance, or want to start a new
-      project, our team is here to help.
-    </p>
+    <h2 class="mt-5 max-w-4xl text-4xl capitalize sm:text-7xl md:text-7xl lg:text-[5rem]">Any Questions Rising? We are All Here.</h2>
+    <p class="mt-7 mb-7 max-w-md text-pretty text-white/60">Whether you have a question, need assistance, or want to start a new project, our team is here to help.</p>
     <PrimaryButton content="Fill the form out!" link="#form" />
   </div>
 
-  <div
-    id="form"
-    class="container mx-auto flex items-start flex-wrap justify-center gap-5 px-5 text-white">
+  <div id="form" class="container mx-auto flex flex-wrap items-start justify-center gap-5 px-5 text-white">
     <div class="max-w-4xl grow">
       <Container>
-        <form class="flex flex-col gap-7 sm:w-full">
+        <form id="contact-form" class="flex flex-col gap-7 sm:w-full">
           <div class="flex flex-col gap-7 md:flex-row">
             <InputContainer label="First name" id="first-name">
-              <TextInput id="first-name" />
+              <TextInput id="first-name" required={true} />
             </InputContainer>
             <InputContainer label="Last name" id="last-name">
-              <TextInput id="last-name" />
+              <TextInput id="last-name" required={true} />
             </InputContainer>
           </div>
           <InputContainer label="How can we reach you?" id="email">
-            <input
-              id="email"
-              type="email"
-              placeholder="email@example.com"
-              class="bg-secondary-700 w-full rounded-lg border border-white/10 px-2 py-2 pb-3 placeholder:text-white/30"
-            />
+            <input id="email" type="email" placeholder="email@example.com" class="bg-secondary-700 w-full rounded-lg border border-white/10 px-2 py-2 pb-3 placeholder:text-white/30" required="true" />
           </InputContainer>
           <InputContainer label="Message" id="message">
             <!-- prettier-ignore -->
             <textarea
               id="message"
+              required="true"
               class="bg-secondary-700 h-32 w-full rounded-lg border border-white/10 px-2 py-2"></textarea>
           </InputContainer>
+          <p id="success-msg" class="hidden text-center text-white/30">Your response has been submitted</p>
+          <button type="submit" class="bg-primary-400 relative isolate inline-flex w-full items-center justify-center rounded-lg p-1 capitalize">
+            <span class="bg-primary-500 inline-block w-full rounded-md px-3 py-1 text-white capitalize sm:py-2">Submit now</span>
+            <span class="bg-primary-500 absolute -z-10 h-1/2 w-[80%] rounded-full blur-2xl"></span>
+          </button>
         </form>
       </Container>
     </div>
     <div class="flex grow flex-col flex-wrap gap-4 sm:flex-row lg:max-w-72">
       <div class="min-w-60 grow basis-2">
         <Container>
-          <h3>Email</h3>
-          <div
-            class="my-3 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
+          <div class="flex items-center gap-2">
+            <svg class="h-5" viewBox="0 0 20 20">
+              <path d="M 5.833 7.5 L 10 10.417 L 14.166 7.5" fill="transparent" stroke-width="1.5" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="">
+              </path><path
+                d="M 1.667 14.167 L 1.667 5.833 C 1.667 4.913 2.413 4.167 3.333 4.167 L 16.666 4.167 C 17.587 4.167 18.333 4.913 18.333 5.833 L 18.333 14.167 C 18.333 15.087 17.587 15.833 16.666 15.833 L 3.333 15.833 C 2.413 15.833 1.667 15.087 1.667 14.167 Z"
+                fill="transparent"
+                stroke-width="1.5"
+                stroke="rgb(255, 255, 255)"
+                stroke-miterlimit="10"
+                stroke-dasharray="">
+              </path>
+            </svg>
+            <h3>Email</h3>
           </div>
-          <a href="mailto:nyxia.agency@gmail.com" class="text-white/30">
-            nyxia.agency@gmail.com
-          </a>
+          <div class="my-3 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent"></div>
+          <a href="mailto:nyxia.agency@gmail.com" class="text-white/30">nyxia.agency@gmail.com</a>
         </Container>
       </div>
       <div class="min-w-60 grow basis-2">
         <Container>
-          <h3>Phone</h3>
-          <div
-            class="my-3 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
+          <div class="flex items-center gap-2">
+            <svg class="h-5" viewBox="0 0 20 20">
+              <path d="M 10 13.342 L 10.008 13.332" fill="transparent" stroke-width="1.5" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path><path
+                d="M 5.833 16.167 L 5.833 3.833 C 5.833 3.557 6.057 3.333 6.333 3.333 L 13.666 3.333 C 13.943 3.333 14.166 3.557 14.166 3.833 L 14.166 16.167 C 14.166 16.443 13.943 16.667 13.666 16.667 L 6.333 16.667 C 6.057 16.667 5.833 16.443 5.833 16.167 Z"
+                fill="transparent"
+                stroke-width="1.5"
+                stroke="rgb(255, 255, 255)"
+                stroke-miterlimit="10"
+                stroke-dasharray="">
+              </path>
+            </svg>
+            <h3>Phone</h3>
           </div>
-          <a
-            href="https://wa.me/919383475378?text=Hey%20Nyxia"
-            target="_blank"
-            class="text-white/30">
-            +91 9383 47 5378
-          </a>
+          <div class="my-3 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent"></div>
+          <a href="https://wa.me/919698652250?text=Hey%20Nyxia" target="_blank" class="text-white/30">+91 9698 65 2250</a>
         </Container>
       </div>
     </div>
 
-    <div
-      class="relative isolate -z-10 container mx-auto mt-16 -mb-2 flex justify-center">
-      <div class="bg-primary-500 absolute top-0 -z-10 h-32 w-[70%] blur-3xl">
-      </div>
+    <div class="relative isolate -z-10 container mx-auto mt-16 -mb-2 flex justify-center">
+      <div class="bg-primary-500 absolute top-0 -z-10 h-32 w-[70%] blur-3xl"></div>
       <svg viewBox="0 0 1440 97" fill="none" id="svg-177258987_1568">
         <path
           d="M1280.45 0H159.546C133.625 0 108.146 6.71721 85.594 19.4967L-9.15527e-05 68H1440L1354.41 19.4967C1331.85 6.71722 1306.38 0 1280.45 0Z"
@@ -100,58 +101,23 @@ import TextInput from "../components/TextInput.astro";
           stroke="url(#svg-177258987_1568_paint1_linear_763_7)"
           stroke-opacity="0.1">
         </path>
-        <rect
-          x="-9.15527e-05"
-          y="67"
-          width="1440"
-          height="30"
-          fill="url(#svg-177258987_1568_paint2_linear_763_7)">
-        </rect>
-        <rect
-          x="270"
-          width="900"
-          height="1"
-          fill="url(#svg-177258987_1568_paint3_linear_763_7)">
-        </rect>
+        <rect x="-9.15527e-05" y="67" width="1440" height="30" fill="url(#svg-177258987_1568_paint2_linear_763_7)"></rect>
+        <rect x="270" width="900" height="1" fill="url(#svg-177258987_1568_paint3_linear_763_7)"></rect>
         <defs>
-          <linearGradient
-            id="svg-177258987_1568_paint0_linear_763_7"
-            x1="752.681"
-            y1="-2.71596"
-            x2="754.453"
-            y2="134.209"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint0_linear_763_7" x1="752.681" y1="-2.71596" x2="754.453" y2="134.209" gradientUnits="userSpaceOnUse">
             <stop stop-color="#0A0A0A"></stop>
             <stop offset="1"></stop>
           </linearGradient>
-          <linearGradient
-            id="svg-177258987_1568_paint1_linear_763_7"
-            x1="-0.000105544"
-            y1="46"
-            x2="600.261"
-            y2="755.974"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint1_linear_763_7" x1="-0.000105544" y1="46" x2="600.261" y2="755.974" gradientUnits="userSpaceOnUse">
             <stop stop-color="#999999"></stop>
             <stop offset="0.506458" stop-color="white"></stop>
             <stop offset="1" stop-color="#999999"></stop>
           </linearGradient>
-          <linearGradient
-            id="svg-177258987_1568_paint2_linear_763_7"
-            x1="720"
-            y1="97"
-            x2="720"
-            y2="67"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint2_linear_763_7" x1="720" y1="97" x2="720" y2="67" gradientUnits="userSpaceOnUse">
             <stop></stop>
             <stop offset="1" stop-color="#060606"></stop>
           </linearGradient>
-          <linearGradient
-            id="svg-177258987_1568_paint3_linear_763_7"
-            x1="270"
-            y1="0.5"
-            x2="1170"
-            y2="0.5"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint3_linear_763_7" x1="270" y1="0.5" x2="1170" y2="0.5" gradientUnits="userSpaceOnUse">
             <stop stop-color="#0055FF" stop-opacity="0"></stop>
             <stop offset="0.5" stop-color="#0055FF"></stop>
             <stop offset="1" stop-color="#0055FF" stop-opacity="0"></stop>
@@ -161,3 +127,42 @@ import TextInput from "../components/TextInput.astro";
     </div>
   </div>
 </Main>
+
+<script type="module">
+  const contactForm = document.getElementById("contact-form");
+  contactForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const firstName = document.getElementById("first-name");
+    const lastName = document.getElementById("last-name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    if (!(firstName.value && lastName.value && email.value && message).value) {
+      return;
+    }
+
+    let formData = new FormData();
+    formData.append("entry.1751228216", firstName.value);
+    formData.append("entry.516565479", lastName.value);
+    formData.append("entry.1839830392", email.value);
+    formData.append("entry.1923442304", message.value);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSeKYjWIrh3rNmkVHPjikrZRpGSHi-14m2Qrx0NqR13lQIMEjg/formResponse", {
+      method: "POST",
+      body: formData,
+      mode: "no-cors",
+    }).then(() => {
+      const successMsg = document.getElementById("success-msg");
+      successMsg.classList.remove("hidden");
+
+      setTimeout(() => {
+        firstName.value = "";
+        lastName.value = "";
+        email.value = "";
+        message.value = "";
+        successMsg.classList.add("hidden");
+      }, 5000);
+    });
+  });
+</script>
