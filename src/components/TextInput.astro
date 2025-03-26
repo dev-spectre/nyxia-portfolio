@@ -2,14 +2,10 @@
 interface Props {
   id: string;
   placeholder?: string;
+  required?: boolean;
 }
 
-const { id, placeholder = "" } = Astro.props;
+const { id, placeholder = "", required = false } = Astro.props;
 ---
 
-<input
-  id={id}
-  placeholder={placeholder}
-  type="text"
-  class="bg-secondary-700 w-full rounded-lg border border-white/10 px-3 py-3"
-/>
+<input id={id} placeholder={placeholder} type="text" class="bg-secondary-700 w-full rounded-lg border border-white/10 px-3 py-3" required={required} />
