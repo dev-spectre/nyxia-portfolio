@@ -1,0 +1,16 @@
+---
+import PrimaryButton from "../components/PrimaryButton.astro";
+import Error from "../layouts/Error.astro";
+---
+
+<Error>
+  <main class="container mx-auto grid grid-cols-1 place-items-center px-5 py-52 text-center text-white">
+    <div class="flex items-center gap-1 rounded-lg border border-white/5 bg-white/10 px-1 py-1 capitalize">
+      <div class="bg-primary-500 rounded-md px-2 py-1 text-sm font-extrabold">OOPS</div>
+      <span>Page not found</span>
+    </div>
+    <h2 class="mt-5 max-w-5xl text-4xl capitalize sm:text-6xl md:text-7xl lg:text-[5rem]"><div>404</div> <div>Page not found.</div></h2>
+    <p class="mt-7 mb-7 max-w-md text-pretty text-white/60">Oops! The web page you're looking for doesn't exist. Please click the below button to get back to the home.</p>
+    <PrimaryButton content="Back to homepage" link="/" />
+  </main>
+</Error>

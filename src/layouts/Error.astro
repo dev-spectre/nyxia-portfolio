@@ -5,8 +5,6 @@ import backgroundVideo from "../assets/bg.webm";
 import backgroundVideoReduced from "../assets/bg-reduced.webm";
 import backgroundVideoThumbnail from "../assets/bg-thumbnail.avif";
 import "../styles/global.css";
-import JoinUsCard from "../components/JoinUsCard.astro";
-import Faq from "../components/Faq.astro";
 ---
 
 <!doctype html>
@@ -25,10 +23,6 @@ import Faq from "../components/Faq.astro";
   <body class="bg-black">
     <Navbar />
     <slot />
-    <Faq />
-    <div class="flex items-center justify-center px-5 py-24">
-      <JoinUsCard />
-    </div>
     <Footer />
     <div class="absolute top-0 -z-10 h-[800px] w-full overflow-hidden">
       <video id="bg-video" playsinline muted autoplay loop poster={backgroundVideoThumbnail.src} class="bg-red pointer-events-none h-full min-w-full object-cover blur-lg">
