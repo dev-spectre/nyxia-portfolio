@@ -18,36 +18,18 @@ import responsiveDesign from "../assets/responsive.svg";
 import benefitsBanner from "../assets/next.avif";
 import CardTag from "../components/CardTag.astro";
 
-const nyxiaBenefits = [
-  "Boosted conversions",
-  "Fast loading",
-  "Customisable",
-  "Scalable",
-  "Increased engagement",
-  "Expandable",
-  "Secure",
-  "User-friendly",
-];
+const nyxiaBenefits = ["Boosted conversions", "Fast loading", "Customisable", "Scalable", "Increased engagement", "Expandable", "Secure", "User-friendly"];
 ---
 
 <Main>
   <Hero />
   <div class="mt-5 text-white/60 sm:mt-32 lg:mt-62">
-    <section
-      class="container mx-auto mb-32 flex-wrap justify-between gap-10 px-5 lg:flex">
+    <section class="container mx-auto mb-32 flex-wrap justify-between gap-10 px-5 lg:flex">
       <div>
         <TitleCard title="About Nyxia" />
-        <SecondaryTitle
-          main="Building stronger brands"
-          sub="creating impressions!"
-        />
-        <p class="my-7 max-w-md">
-          Delivering high-quality, on-demand designs with precision. Elevate
-          your brand effortlessly, one snap at a time.
-        </p>
-        <div
-          class="my-7 h-[1px] max-w-md -translate-x-16 bg-gradient-to-l from-transparent via-white/10 to-transparent">
-        </div>
+        <SecondaryTitle main="Building stronger brands" sub="creating impressions!" />
+        <p class="my-7 max-w-md">Delivering high-quality, on-demand designs with precision. Elevate your brand effortlessly, one snap at a time.</p>
+        <div class="my-7 h-[1px] max-w-md -translate-x-16 bg-gradient-to-l from-transparent via-white/10 to-transparent"></div>
         <ul>
           <FeatureListItem content="We believe quality comes from perfection" />
           <FeatureListItem content="Creating everything from nothing" />
@@ -56,11 +38,7 @@ const nyxiaBenefits = [
           <PrimaryButton link="/about" content="View about Nyxia" />
         </div>
       </div>
-      <ImageContainer
-        imgSrc={womanUsingLaptop.src}
-        alt="A woman using laptop."
-        className="w-xl"
-      />
+      <ImageContainer imgSrc={womanUsingLaptop.src} alt="A woman using laptop." className="w-full max-w-xl" />
     </section>
 
     <EvenSection
@@ -72,30 +50,18 @@ const nyxiaBenefits = [
       buttonText="Book a 15-min call"
     />
 
-    <section
-      class="container mx-auto mb-16 grid-cols-2 items-start justify-between gap-10 px-5 lg:relative lg:grid">
+    <section class="container mx-auto mb-16 grid-cols-2 items-start justify-between gap-10 px-5 lg:relative lg:grid">
       <div class="mb-10">
         <TitleCard title="How We Work?" />
-        <SecondaryTitle
-          main="We Simplify The Journey"
-          sub="From Design To Launch."
-        />
-        <p class="my-7 max-w-md">
-          We make it easy to bring your ideas to life, guiding you from concept
-          to a fully launched product.
-        </p>
+        <SecondaryTitle main="We Simplify The Journey" sub="From Design To Launch." />
+        <p class="my-7 max-w-md">We make it easy to bring your ideas to life, guiding you from concept to a fully launched product.</p>
         <div class="flex flex-col gap-7">
           <Card
             category="Stage 1"
             title="Kickoff"
             content="The kickoff stage is where everything begins. We align with you to understand your goals, vision, and expectations. Through in-depth discussions and thorough research."
             tags={["Comprehensive consultation", "Project roadmap"]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="rgb(255, 255, 255)">
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)">
               <g>
                 <path
                   d="M152,224a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,224ZM128,112a12,12,0,1,0-12-12A12,12,0,0,0,128,112Zm95.62,43.83-12.36,55.63a16,16,0,0,1-25.51,9.11L158.51,200h-61L70.25,220.57a16,16,0,0,1-25.51-9.11L32.38,155.83a16.09,16.09,0,0,1,3.32-13.71l28.56-34.26a123.07,123.07,0,0,1,8.57-36.67c12.9-32.34,36-52.63,45.37-59.85a16,16,0,0,1,19.6,0c9.34,7.22,32.47,27.51,45.37,59.85a123.07,123.07,0,0,1,8.57,36.67l28.56,34.26A16.09,16.09,0,0,1,223.62,155.83ZM99.43,184h57.14c21.12-37.54,25.07-73.48,11.74-106.88C156.55,47.64,134.49,29,128,24c-6.51,5-28.57,23.64-40.33,53.12C74.36,110.52,78.31,146.46,99.43,184Zm-15,5.85Q68.28,160.5,64.83,132.16L48,152.36,60.36,208l.18-.13ZM208,152.36l-16.83-20.2q-3.42,28.28-19.56,57.69l23.85,18,.18.13Z">
@@ -108,11 +74,7 @@ const nyxiaBenefits = [
             title="Execution"
             content="With a clear strategy in place, we move into the execution phase, where ideas come to life. Our team works high efficiently and collaboratively to implement the plan."
             tags={["Seamless integration", "Real time collaboration"]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false">
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false">
               <g color="rgb(255, 255, 255)">
                 <path
                   d="M196.12,128c24.65-34.61,37.22-70.38,19.74-87.86S162.61,35.23,128,59.88C93.39,35.23,57.62,22.66,40.14,40.14S35.23,93.39,59.88,128c-24.65,34.61-37.22,70.38-19.74,87.86h0c5.63,5.63,13.15,8.14,21.91,8.14,18.48,0,42.48-11.17,66-27.88C151.47,212.83,175.47,224,194,224c8.76,0,16.29-2.52,21.91-8.14h0C233.34,198.38,220.77,162.61,196.12,128Zm8.43-76.55c7.64,7.64,2.48,32.4-18.52,63.28a300.33,300.33,0,0,0-21.19-23.57A300.33,300.33,0,0,0,141.27,70C172.15,49,196.91,43.8,204.55,51.45ZM176.29,128a289.14,289.14,0,0,1-22.76,25.53A289.14,289.14,0,0,1,128,176.29a289.14,289.14,0,0,1-25.53-22.76A289.14,289.14,0,0,1,79.71,128,298.62,298.62,0,0,1,128,79.71a289.14,289.14,0,0,1,25.53,22.76A289.14,289.14,0,0,1,176.29,128ZM51.45,51.45c2.2-2.21,5.83-3.35,10.62-3.35C73.89,48.1,92.76,55,114.72,70A304,304,0,0,0,91.16,91.16,300.33,300.33,0,0,0,70,114.73C49,83.85,43.81,59.09,51.45,51.45Zm0,153.1C43.81,196.91,49,172.15,70,141.27a300.33,300.33,0,0,0,21.19,23.57A304.18,304.18,0,0,0,114.73,186C83.85,207,59.09,212.2,51.45,204.55Zm153.1,0c-7.64,7.65-32.4,2.48-63.28-18.52a304.18,304.18,0,0,0,23.57-21.19A300.33,300.33,0,0,0,186,141.27C207,172.15,212.19,196.91,204.55,204.55ZM140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Z">
@@ -125,11 +87,7 @@ const nyxiaBenefits = [
             title="Handoff"
             content="Once the design and development are finalized, we seamlessly transition to the handoff stage. Here, we provide you with all the assets, documentation, and support to a smooth launch."
             tags={["Ongoing support", "Documentation"]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false">
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false">
               <g color="rgb(255, 255, 255)">
                 <path
                   d="M174.63,81.37a80,80,0,1,0-93.26,93.26,80,80,0,1,0,93.26-93.26ZM224,160c0,1.52-.07,3-.18,4.51l-50-50A80,80,0,0,0,176,98,64.11,64.11,0,0,1,224,160Zm-13.47,39.21L157.91,146.6a80.5,80.5,0,0,0,9.93-15.44L219.7,183A64,64,0,0,1,210.53,199.21ZM183,219.7l-51.86-51.86a80.5,80.5,0,0,0,15.44-9.93l52.61,52.62A64,64,0,0,1,183,219.7ZM45.47,56.79,98.09,109.4a80.5,80.5,0,0,0-9.93,15.44L36.3,73A64,64,0,0,1,45.47,56.79ZM73,36.3l51.86,51.86a80.5,80.5,0,0,0-15.44,9.93L56.79,45.47A64,64,0,0,1,73,36.3ZM160,96a64.07,64.07,0,0,1-64,64A64.07,64.07,0,0,1,160,96Zm-2-16a80,80,0,0,0-16.49,2.13l-50-50C93,32.07,94.48,32,96,32A64.11,64.11,0,0,1,158,80.05ZM32,96c0-1.52.07-3,.18-4.51l50,50A80,80,0,0,0,80.05,158,64.11,64.11,0,0,1,32,96ZM98,176a80,80,0,0,0,16.49-2.13l50,50c-1.49.11-3,.18-4.51.18A64.11,64.11,0,0,1,98,176Z">
@@ -140,13 +98,11 @@ const nyxiaBenefits = [
         </div>
       </div>
       <div class="top-32 justify-self-end lg:sticky">
-        <ImageContainer imgSrc={manUsingLaptop.src} alt="A man using laptop." />
+        <ImageContainer imgSrc={manUsingLaptop.src} alt="A man using laptop." className="w-full max-w-lg" />
       </div>
     </section>
 
-    <div
-      class="container mx-auto mb-10 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
-    </div>
+    <div class="container mx-auto mb-10 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent"></div>
 
     <EvenSection
       primaryTitle="Features"
@@ -157,83 +113,42 @@ const nyxiaBenefits = [
       buttonText="View about Nyxia"
     />
 
-    <section
-      class="container mx-auto mb-16 flex flex-wrap justify-center gap-5 px-5">
-      <FeatureCard
-        iconSrc={buglessDevelopment.src}
-        title="Bug less development"
-        secondaryTitle="Optimized code"
-        content="Our bug-less development ensures that your website runs smooth and fast"
-      />
+    <section class="container mx-auto mb-16 flex flex-wrap justify-center gap-5 px-5">
+      <FeatureCard iconSrc={buglessDevelopment.src} title="Bug less development" secondaryTitle="Optimized code" content="Our bug-less development ensures that your website runs smooth and fast" />
       <FeatureCard
         iconSrc={fastDelivery.src}
         title="Lightning fast delivery"
         secondaryTitle="Quick turnaround"
         content="Ensuring your deliverables are ready when you need them, with great quality."
       />
-      <FeatureCard
-        iconSrc={responsiveDesign.src}
-        title="Mobile friendly"
-        secondaryTitle="Responsive"
-        content="Our mobile-friendly design ensures your design looks stunning across all devices."
-      />
+      <FeatureCard iconSrc={responsiveDesign.src} title="Mobile friendly" secondaryTitle="Responsive" content="Our mobile-friendly design ensures your design looks stunning across all devices." />
     </section>
 
-    <div
-      class="container mx-auto mb-10 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
-    </div>
+    <div class="container mx-auto mb-10 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent"></div>
 
     <section class="container mx-auto mb-16 gap-5 px-5">
       <div class="max-w-3xl">
         <TitleCard title="Nyxia Benefits" />
-        <SecondaryTitle
-          main="We Just Don't Design, We Build."
-          sub="If You Can Dream It, We Can Play It!"
-        />
+        <SecondaryTitle main="We Just Don't Design, We Build." sub="If You Can Dream It, We Can Play It!" />
         <div class="mt-7 flex flex-wrap gap-3">
-          {
-            nyxiaBenefits.map((benefit) => (
-              <span class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
-                {benefit}
-              </span>
-            ))
-          }
-          <a href="/contact" class="rounded-xl bg-white px-3 py-2 text-black">
-            Contact Now
-          </a>
+          {nyxiaBenefits.map((benefit) => <span class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">{benefit}</span>)}
+          <a href="/contact" class="rounded-xl bg-white px-3 py-2 text-black">Contact Now</a>
         </div>
-        <div
-          class="relative isolate mt-7 inline-block overflow-hidden rounded-3xl border border-white/10 px-5 py-5">
-          <img
-            src={benefitsBanner.src}
-            alt=""
-            class="rounded-lg border border-white/10 object-cover"
-          />
+        <div class="relative isolate mt-7 inline-block overflow-hidden rounded-3xl border border-white/10 px-5 py-5">
+          <img src={benefitsBanner.src} alt="" class="rounded-lg border border-white/10 object-cover" />
           <h3 class="mt-3 text-lg text-white">Submit unlimited requests</h3>
-          <div
-            class="my-4 h-[1px] w-[30%] bg-gradient-to-l from-transparent via-white/20 to-transparent">
-          </div>
-          <p>
-            Enjoy the freedom to submit unlimited requests without any
-            restrictions. Whether you need design tweaks, we're here to assist
-            you at every step.
-          </p>
+          <div class="my-4 h-[1px] w-[30%] bg-gradient-to-l from-transparent via-white/20 to-transparent"></div>
+          <p>Enjoy the freedom to submit unlimited requests without any restrictions. Whether you need design tweaks, we're here to assist you at every step.</p>
           <div class="mt-5 flex flex-wrap gap-3">
             <PrimaryButton link="/contact" content="Book an appointment" />
-            <a href="/about" class="rounded-lg bg-white/15 px-4 py-3">
-              What is Nyxia?
-            </a>
+            <a href="/about" class="rounded-lg bg-white/15 px-4 py-3">What is Nyxia?</a>
           </div>
-          <div
-            class="bg-primary-500 absolute -bottom-3 left-0 -z-10 h-32 w-64 blur-3xl">
-          </div>
+          <div class="bg-primary-500 absolute -bottom-3 left-0 -z-10 h-32 w-64 blur-3xl"></div>
         </div>
       </div>
     </section>
 
-    <div
-      class="container mx-auto mb-10 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent">
-    </div>
+    <div class="container mx-auto mb-10 h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent"></div>
 
     <EvenSection
       primaryTitle="Portfolio"
@@ -244,10 +159,8 @@ const nyxiaBenefits = [
       buttonText="View portfolio"
     />
 
-    <div
-      class="relative isolate container mx-auto mt-16 -mb-2 flex justify-center">
-      <div class="bg-primary-500 absolute top-0 -z-10 h-32 w-[70%] blur-3xl">
-      </div>
+    <div class="relative isolate container mx-auto mt-16 -mb-2 flex justify-center">
+      <div class="bg-primary-500 absolute top-0 -z-10 h-32 w-[70%] blur-3xl"></div>
       <svg viewBox="0 0 1440 97" fill="none" id="svg-177258987_1568">
         <path
           d="M1280.45 0H159.546C133.625 0 108.146 6.71721 85.594 19.4967L-9.15527e-05 68H1440L1354.41 19.4967C1331.85 6.71722 1306.38 0 1280.45 0Z"
@@ -258,58 +171,23 @@ const nyxiaBenefits = [
           stroke="url(#svg-177258987_1568_paint1_linear_763_7)"
           stroke-opacity="0.1">
         </path>
-        <rect
-          x="-9.15527e-05"
-          y="67"
-          width="1440"
-          height="30"
-          fill="url(#svg-177258987_1568_paint2_linear_763_7)">
-        </rect>
-        <rect
-          x="270"
-          width="900"
-          height="1"
-          fill="url(#svg-177258987_1568_paint3_linear_763_7)">
-        </rect>
+        <rect x="-9.15527e-05" y="67" width="1440" height="30" fill="url(#svg-177258987_1568_paint2_linear_763_7)"></rect>
+        <rect x="270" width="900" height="1" fill="url(#svg-177258987_1568_paint3_linear_763_7)"></rect>
         <defs>
-          <linearGradient
-            id="svg-177258987_1568_paint0_linear_763_7"
-            x1="752.681"
-            y1="-2.71596"
-            x2="754.453"
-            y2="134.209"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint0_linear_763_7" x1="752.681" y1="-2.71596" x2="754.453" y2="134.209" gradientUnits="userSpaceOnUse">
             <stop stop-color="#0A0A0A"></stop>
             <stop offset="1"></stop>
           </linearGradient>
-          <linearGradient
-            id="svg-177258987_1568_paint1_linear_763_7"
-            x1="-0.000105544"
-            y1="46"
-            x2="600.261"
-            y2="755.974"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint1_linear_763_7" x1="-0.000105544" y1="46" x2="600.261" y2="755.974" gradientUnits="userSpaceOnUse">
             <stop stop-color="#999999"></stop>
             <stop offset="0.506458" stop-color="white"></stop>
             <stop offset="1" stop-color="#999999"></stop>
           </linearGradient>
-          <linearGradient
-            id="svg-177258987_1568_paint2_linear_763_7"
-            x1="720"
-            y1="97"
-            x2="720"
-            y2="67"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint2_linear_763_7" x1="720" y1="97" x2="720" y2="67" gradientUnits="userSpaceOnUse">
             <stop></stop>
             <stop offset="1" stop-color="#060606"></stop>
           </linearGradient>
-          <linearGradient
-            id="svg-177258987_1568_paint3_linear_763_7"
-            x1="270"
-            y1="0.5"
-            x2="1170"
-            y2="0.5"
-            gradientUnits="userSpaceOnUse">
+          <linearGradient id="svg-177258987_1568_paint3_linear_763_7" x1="270" y1="0.5" x2="1170" y2="0.5" gradientUnits="userSpaceOnUse">
             <stop stop-color="#0055FF" stop-opacity="0"></stop>
             <stop offset="0.5" stop-color="#0055FF"></stop>
             <stop offset="1" stop-color="#0055FF" stop-opacity="0"></stop>
@@ -317,29 +195,18 @@ const nyxiaBenefits = [
         </defs>
       </svg>
     </div>
-    <section
-      class="relative z-10 container mx-auto mb-24 grid-cols-2 items-start justify-between gap-10 bg-black px-5 lg:relative lg:grid">
+    <section class="relative z-10 container mx-auto mb-24 grid-cols-2 items-start justify-between gap-10 bg-black px-5 lg:relative lg:grid">
       <div class="mb-16">
         <TitleCard title="Our Services" />
-        <SecondaryTitle
-          main="Get High-Quality"
-          sub="Clear Services Remotely."
-        />
-        <p class="mt-5 mb-10 max-w-md">
-          Discover our range of services designed to elevate your brand and
-          propel your business to next level.
-        </p>
+        <SecondaryTitle main="Get High-Quality" sub="Clear Services Remotely." />
+        <p class="mt-5 mb-10 max-w-md">Discover our range of services designed to elevate your brand and propel your business to next level.</p>
         <div class="flex flex-col gap-5">
           <Card
             category="Design"
             title="Full Design Package"
             content="From custom logo designs to comprehensive brand guidelines, web design, and marketing materials, we cover all aspects of your visual presence."
             features={["Files + Branding Assets", "Easy edit and access"]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false">
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false">
               <g color="rgb(255, 255, 255)">
                 <path
                   d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z">
@@ -357,11 +224,7 @@ const nyxiaBenefits = [
             title="Full Website Sprint"
             content="By streamlining the process and focusing on key milestones, we ensure your website is ready to go live quickly, without sacrificing quality."
             features={["Design + development", "Interactive elements"]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false">
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false">
               <g color="rgb(255, 255, 255)">
                 <path
                   d="M131.58,16.85a8,8,0,0,0-7.16,0C120.32,18.9,24,67.84,24,136a56,56,0,0,0,74.15,53L88.34,221.7A8,8,0,0,0,96,232h64a8,8,0,0,0,7.66-10.3L157.85,189A56,56,0,0,0,232,136C232,67.84,135.68,18.9,131.58,16.85ZM176,176a40,40,0,0,1-26.29-9.85,8,8,0,0,0-12.92,8.33L149.25,216h-42.5l12.46-41.52a8,8,0,0,0-12.92-8.33A40,40,0,0,1,40,136c0-29.88,24.41-56.55,44.89-73.66A279.13,279.13,0,0,1,128,33.06a279.13,279.13,0,0,1,43.11,29.28C208.21,93.34,216,119.51,216,136A40,40,0,0,1,176,176Z">
@@ -378,15 +241,8 @@ const nyxiaBenefits = [
             category="Development"
             title="Full Stack Development"
             content="Whether you're building a simple website or a complex web application, our team provides scalable solutions tailored to your needs, ensuring your project is robust."
-            features={[
-              "HTML + JavaScript + React code",
-              "Database and back-end",
-            ]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false">
+            features={["HTML + JavaScript + React code", "Database and back-end"]}>
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false">
               <g color="rgb(255, 255, 255)">
                 <path
                   d="M176,72a71.5,71.5,0,0,0-7.76.43,91.77,91.77,0,0,0-21.62-25.11C108.78,16.79,57.05,23.77,54.87,24.08a8,8,0,0,0-3.31,14.58c17.5,11.66,25.51,31,28.85,49.74A72,72,0,1,0,142,207.5,72,72,0,1,0,176,72ZM76,39.37c16.67.72,41.24,4.78,60.64,20.48a75.28,75.28,0,0,1,15,16.4A72.2,72.2,0,0,0,121.9,96.5a71.46,71.46,0,0,0-25.23-8C93.54,68.59,86.56,52,76,39.37ZM88,216a56,56,0,0,1-5.76-111.7,176.49,176.49,0,0,1-1,31.08c-7.58-1.43-11.35-4.85-11.55-5a8,8,0,0,0-11.32,11.32C59.4,142.71,69.2,152,87.92,152h.25c18.66-.05,28.43-9.28,29.49-10.33a8,8,0,0,0-11.32-11.32,22.31,22.31,0,0,1-8.93,4.44A190.36,190.36,0,0,0,98.34,105,56,56,0,0,1,88,216Zm57-99.89a72.27,72.27,0,0,0-9.82-10.42,56.15,56.15,0,0,1,24.22-15.16A110.84,110.84,0,0,1,167,118.88c-6.09-1.6-9.16-4.37-9.33-4.54A8,8,0,0,0,145,116.11ZM176,200a55.76,55.76,0,0,1-24.69-5.73,71.83,71.83,0,0,0,2.5-63.42A47.47,47.47,0,0,0,175.67,136H176c18.77,0,28.6-9.28,29.66-10.34a8,8,0,0,0-11.32-11.32c-.19.19-3.84,3.49-11.15,5A131.66,131.66,0,0,0,175.7,88h.3a56,56,0,0,1,0,112Z">
@@ -403,15 +259,8 @@ const nyxiaBenefits = [
             category="Editing"
             title="Video Editing"
             content="Engaging videos tailored to your style, Whether for business, social media, or advertisement, we handle the editing so you can focus on what matters."
-            features={[
-              "Shortform + Longform contents",
-              "Best retention edits",
-            ]}>
-            <svg
-              slot="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false">
+            features={["Shortform + Longform contents", "Best retention edits"]}>
+            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false">
               <g color="rgb(255, 255, 255)">
                 <path
                   d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z">
@@ -430,7 +279,7 @@ const nyxiaBenefits = [
         </div>
       </div>
       <div class="top-32 order-first justify-self-end lg:sticky">
-        <ImageContainer imgSrc={manUsingTablet.src} alt="A man using tablet" />
+        <ImageContainer imgSrc={manUsingTablet.src} alt="A man using tablet" className="w-full max-w-lg" />
       </div>
     </section>
 
@@ -444,7 +293,5 @@ const nyxiaBenefits = [
     />
   </div>
 
-  <div
-    class="container mx-auto h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent px-5">
-  </div>
+  <div class="container mx-auto h-[1px] bg-gradient-to-l from-transparent via-white/10 to-transparent px-5"></div>
 </Main>
